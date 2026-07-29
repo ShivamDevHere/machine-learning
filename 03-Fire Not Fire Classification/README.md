@@ -11,7 +11,7 @@
 - Linear Regression Model
 - Lasso Regression Model + Cross Validation Lasso
 - Ridge Regression Model + Cross Validation Ridge
-- Elastic Regression Model
+- Elastic Regression Model + Cross Validation ElasticNetCv
 
 #### Linear Regression Model
 
