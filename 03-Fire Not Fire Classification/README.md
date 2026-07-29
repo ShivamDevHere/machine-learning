@@ -6,6 +6,13 @@
     4. Tuning
 
 ---
+
+#### Model Trained
+- Linear Regression Model
+- Lasso Regression Model
+- Ridge Regression Model
+- Elastic Regression Model
+
 #### Linear Regression Model
 
 ```
