@@ -2,6 +2,5 @@
 
     1. Data Cleaning 
     2. EDA
-    3. Feature Engineering
-    4. Model Training 
-    5. Tuning
+    3. Feature Engineering & Model Training 
+    4. Tuning
