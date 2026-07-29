@@ -9,7 +9,7 @@
 
 #### Model Trained
 - Linear Regression Model
-- Lasso Regression Model
+- Lasso Regression Model + Cross Validation Lasso
 - Ridge Regression Model
 - Elastic Regression Model
 
