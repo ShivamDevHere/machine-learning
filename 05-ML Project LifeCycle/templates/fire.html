@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+
+{% block title %}Fire Not Fire Classification{% endblock %}
+
+{% block content %}
+
+<section class="project-hero ">
+    <div class="hero-content">
+        <h1>🔥 Fire Not Fire Classification</h1>
+        <p>
+            Predict the Fire Weather Index (FWI) using weather and environmental
+            parameters through a trained Machine Learning model.
+        </p>
+    </div>
+</section>
+
+
+<section class="project-container">
+
+    <div class="info-grid">
+
+        <div class="info-card fade-up">
+
+            <h2>📖 Project Overview</h2>
+
+            <p>
+                This project demonstrates a complete Machine Learning workflow,
+                including data preprocessing, feature engineering, model training,
+                evaluation and deployment using Flask.
+            </p>
+
+        </div>
+
+        <div class="info-card fade-up delay-1">
+
+            <h2>🛠 Tech Stack</h2>
+
+            <div class="tech-stack">
+
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>NumPy</span>
+                <span>Scikit-Learn</span>
+                <span>Flask</span>
+                <span>HTML</span>
+                <span>CSS</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="prediction-card fade-up delay-2">
+
+        <h2>🔥 Live Prediction</h2>
+
+        <form action="{{ url_for('predict_datapoint') }}" method="post">
+
+            <div class="form-grid">
+
+                <input type="number" step="any" name="Temperature" placeholder="Temperature" required>
+
+                <input type="number" step="any" name="RH" placeholder="Humidity (RH)" required>
+
+                <input type="number" step="any" name="Ws" placeholder="Wind Speed" required>
+
+                <input type="number" step="any" name="Rain" placeholder="Rainfall" required>
+
+                <input type="number" step="any" name="FFMC" placeholder="FFMC" required>
+
+                <input type="number" step="any" name="DMC" placeholder="DMC" required>
+
+                <input type="number" step="any" name="ISI" placeholder="ISI" required>
+
+                <input type="number" step="any" name="Classes" placeholder="Class (0 / 1)" required>
+
+                <input type="number" step="any" name="Region" placeholder="Region (0 / 1)" required>
+
+            </div>
+
+            <button class="predict-btn" type="submit">
+
+                Predict Fire Weather Index
+
+            </button>
+
+        </form>
+
+        {% if results %}
+
+        <div class="result-box">
+
+            <h3>Prediction Result</h3>
+
+            <span>{{ results }}</span>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <div class="info-card fade-up delay-3 project-link">
+
+        <h2>🔗 Project Links</h2>
+
+        <div class="buttons">
+
+            <a href="#" target="_blank">GitHub</a>
+
+            <a href="/" class="secondary-btn">Back Home</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends "base.html" %} {% block title %} Fire Not Fire Classification {%
+endblock %} {% block content %}
+
+<section class="project-hero">
+  <h1>🔥 Fire Not Fire Classification</h1>
+
+  <p>
+    Machine Learning project for predicting the Fire Weather Index (FWI) using
+    weather conditions and environmental features.
+  </p>
+</section>
+
+<section class="project-details">
+  <div class="info-card">
+    <h2>Project Overview</h2>
+
+    <p>
+      This project demonstrates the complete machine learning workflow,
+      including data cleaning, exploratory data analysis, feature engineering,
+      model training, evaluation, and deployment.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h2>Tech Stack</h2>
+
+    <ul>
+      <li>Python</li>
+      <li>Pandas</li>
+      <li>NumPy</li>
+      <li>Scikit-Learn</li>
+      <li>Flask</li>
+      <li>HTML</li>
+      <li>CSS</li>
+    </ul>
+  </div>
+
+   <div class="login">
+        <h1>FWI Prediction</h1>
+    </div>
+    <form action="{{ url_for('predict_datapoint') }}" method="post">
+        <!-- <label for="input_data">Enter input data:</label> -->
+
+        <input type="text" name="Temperature" placeholder="Enter Temperature" required="required" />
+        <input type="text" name="RH" placeholder="Enter Humidity" required="required" />
+        <input type="text" name="Ws" placeholder="Enter Wind Speed" required="required" />
+        <input type="text" name="Rain" placeholder="Enter Rainfall" required="required" />
+        <input type="text" name="FFMC" placeholder="Enter FFMC" required="required" />
+        <input type="text" name="DMC" placeholder="Enter DMC" required="required" />
+        <input type="text" name="ISI" placeholder="Enter ISI" required="required" />
+        <input type="text" name="Classes" placeholder="Enter Classes" required="required" />
+        <input type="text" name="Region" placeholder="Enter Region" required="required" /> 
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+    <h2>Prediction Result: {{results}}</h2>
+  <div class="info-card">
+    <h2>Project Links</h2>
+
+    <div class="buttons">
+      <!-- <a href="#">Live Demo</a> -->
+
+      <!-- <a href="#">GitHub</a> -->
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+

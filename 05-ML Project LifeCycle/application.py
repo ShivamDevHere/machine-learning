@@ -16,7 +16,12 @@ def index():
     return render_template('index.html')
     # return"<h1>Hello World! <br> &nbsp; &nbsp; &nbsp; &nbsp; --ShivamDevHere</h1>"
 
-@app.route("/predictdata",methods=['GET', 'POST'])
+@app.route("/fire")
+def fire():
+    return render_template('fire.html')
+
+
+@app.route("/fire",methods=['GET', 'POST'])
 def predict_datapoint():
     if request.method=="POST":
         Temperature=float(request.form.get('Temperature'))
@@ -33,10 +38,10 @@ def predict_datapoint():
 
         result = ridge_model.predict(new_data_scaled)
 
-        return render_template('home.html', results=result[0])
+        return render_template('fire.html', results=result[0])
 
     else:
-        return render_template('home.html')
+        return render_template('fire.html')
 
 if __name__=="__main__":
     app.run(host="0.0.0.0")

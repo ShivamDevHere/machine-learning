@@ -1,1 +1,84 @@
-<h1>Hello World! <br> &nbsp; &nbsp; &nbsp; &nbsp; --ShivamDevHere</h1>
+{% extends "base.html" %}
+
+{% block title %}
+Home | Python Project Deployment
+{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+
+    <h1>Python Project Deployment</h1>
+
+    <p>
+        A collection of Machine Learning and Python projects with
+        live demonstrations, source code, and documentation.
+    </p>
+
+</section>
+
+<section class="projects">
+
+    <h2>Projects</h2>
+
+    <div class="project-grid">
+
+        <div class="project-card">
+
+            <h3>Fire Not Fire Classification</h3>
+
+            <p>
+                Machine Learning model for predicting Fire Weather Index.
+            </p>
+
+           <a href="{{ url_for('fire') }}">View Project</a>
+
+        </div>
+
+        <div class="project-card">
+
+            <h3>Linear Regression</h3>
+
+            <p>
+                Predict Height and Weight using Simple Linear Regression.
+            </p>
+
+            <a>
+                Comming Soon
+            </a>
+
+        </div>
+
+        <div class="project-card">
+
+            <h3>Multiple Regression</h3>
+
+            <p>
+                Multiple feature regression implementation.
+            </p>
+
+            <a>
+                Comming Soon
+            </a>
+
+        </div>
+
+        <div class="project-card">
+
+            <h3>Polynomial Regression</h3>
+
+            <p>
+                Non-linear regression using polynomial features.
+            </p>
+
+            <a>
+                Comming Soon
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
